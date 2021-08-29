@@ -1,0 +1,77 @@
+.about {
+  background: linear-gradient(rgba(0, 97, 156, 0.7), rgba(0, 97, 156, 0.7)), url(../../img/pic-about.jpg);
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+  .about__title {
+    font-size: 6rem;
+    font-weight: bold;
+    color: #fff; }
+
+.site-content {
+  min-height: 100vh;
+  margin-bottom: 1rem; }
+
+.site-container {
+  width: 90%;
+  margin: 0 auto; }
+
+.site__box {
+  text-align: center; }
+.site__heading {
+  font-size: 3.9rem;
+  color: #00619c;
+  padding: 2rem 0;
+  text-transform: uppercase;
+  margin: 5rem 0rem; }
+.site__item {
+  min-height: 30vh;
+  margin: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem; }
+  .site__item:nth-child(odd) {
+    direction: rtl;
+    text-align: left; }
+  @media only screen and (max-width: 768px) {
+    .site__item {
+      flex-direction: column;
+      text-align: center; }
+      .site__item:nth-child(odd) {
+        direction: rtl;
+        text-align: center; } }
+.site__img {
+  width: 40%;
+  height: 50rem; }
+  .site__img img {
+    object-fit: fill;
+    width: 100%;
+    height: 100%; }
+  @media only screen and (max-width: 768px) {
+    .site__img {
+      width: 65%; } }
+  @media only screen and (max-width: 643px) {
+    .site__img {
+      width: 80%;
+      height: 40rem; } }
+.site__info {
+  width: 70%; }
+.site__title {
+  color: #00619c;
+  font-weight: bold;
+  font-size: 3.2rem; }
+  @media only screen and (max-width: 768px) {
+    .site__title {
+      margin: 3.5rem 0; } }
+.site__text {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #00619c; }
+
+/*# sourceMappingURL=contact-us.css.map */

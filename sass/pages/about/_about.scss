@@ -1,0 +1,23 @@
+.contact{
+    background: linear-gradient(rgba(#00619c,0.7),rgba( #00619c ,0.7)), url(../../img/pic-about.jpg);
+    height: 100% !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    background-color: red;
+
+
+    &__title{
+        font-size: 6rem;
+        font-weight: bold;
+        color: #fff;
+    }
+}
+
+

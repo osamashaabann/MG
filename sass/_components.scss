@@ -1,0 +1,264 @@
+// Calling Whatsapp and Call us
+.calling{
+    position: fixed;
+    top: 75%;
+    right: 10px;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50rem;
+    background-color: #3bb78f;
+    background-image: linear-gradient(315deg, #3bb78f 0%, #0bab64 74%);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: .3s ease;
+    cursor: pointer;
+
+    @media only screen and (max-width: 768px){
+        width: 8rem;
+        height: 8rem;
+
+        background-color: #3bb78f;
+        background-image: linear-gradient(315deg, #3bb78f 0%, #0bab64 74%);
+    }
+    
+
+
+    &__call-us{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .comments{
+        font-size: 2rem;
+
+        @media only screen and (max-width: 768px){
+            font-size: 2.5rem;
+        }
+
+    }
+
+    &__text{
+        font-size: 1.2rem;
+        @media only screen and (max-width: 768px){
+            font-size: 1.7rem;
+        }
+    }
+
+
+    &__links{
+        display: none;
+        justify-content: center;
+        align-items: flex-end;
+        text-align: center;
+        flex-direction: column;
+        position: absolute;
+        top: -105px;
+        right: 20px;
+
+        background-color: #fff;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+        
+        visibility: visible;
+        width: 160px;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 8px 6px;
+
+        
+
+        @media only screen and (max-width: 768px) {
+            top: -110px;
+            right: 30px;
+        }
+
+        @media only screen and (max-width: 424px) {
+            top: -95px;
+            right: 30px;
+        }
+
+        &::after{
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 90%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #fff transparent transparent transparent;
+        }
+
+    }
+
+    &__link{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 4px;
+        
+    
+        &:hover,
+        &:visited{
+            text-decoration: none;
+        color: #94C973;
+            
+        }
+    }
+
+}
+
+.whats{
+    width: 100%;
+    background-color: #3bb78f;
+    background-image: linear-gradient(315deg, #3bb78f 0%, #0bab64 74%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1000rem; 
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+
+    &:hover,
+    &:visited{
+        text-decoration: none;
+    }
+
+    &__icon{
+        background-color: #fff;
+        color: #3bb78f;
+        font-size: 2.4rem;
+        width: 4rem;
+        height: 4rem;
+        line-height: 4rem;
+        border-radius: 1000rem;
+        border: 2px solid #3bb78f;
+
+        @media only screen and (max-width: 768px){
+            font-size: 3.2rem;
+            width: 5rem;
+            height: 5rem;
+            line-height: 5rem;
+
+        }
+
+    }
+
+    &__number{
+        margin-right: 1rem;
+        color: #fff;
+        font-size: 1.4rem;
+        text-decoration: none;
+
+        @media only screen and (max-width: 768px){
+            font-size: 1.9rem;
+
+        }
+    }
+}
+
+
+.phone{
+    width: 100%;
+    background-color: #3bb78f;
+    background-image: linear-gradient(315deg, #3bb78f 0%, #0bab64 74%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1000rem;
+    text-decoration: none;
+
+
+
+    &__icon{
+        background-color: #fff;
+        color: #3bb78f;
+        font-size: 2.4rem;
+        width: 4rem;
+        height: 4rem;
+        line-height: 4rem;
+        border-radius: 1000rem;
+        border: 2px solid #3bb78f;
+
+        @media only screen and (max-width: 768px){
+            font-size: 2.5rem;
+            width: 5rem;
+            height: 5rem;
+            line-height: 5rem;
+        }
+
+    }
+
+    &__number{
+        margin-right: 1rem;
+        color: #fff;
+        font-size: 1.4rem;
+        text-decoration: none !important;
+
+        @media only screen and (max-width: 768px){
+            font-size: 1.9rem;
+        }
+
+        &:hover,
+        &:visited{
+            text-decoration: none;
+        }
+    }
+}
+
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+    display: flex !important;
+  }
+  
+  /* Add animation (fade in the popup) */
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
+
+
+  
+// Scroll To Top Button
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 100%;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #00619c;
+    color: white;
+    cursor: pointer;
+}
+
+#myBtn:hover {
+    background-color: #003252;
+}
+
+@keyframes game {
+    0%{
+        transform: scale(1);
+    }
+
+    100%{
+        transform: scale(0);
+    }
+}

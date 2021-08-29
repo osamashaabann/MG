@@ -1,0 +1,114 @@
+.about{
+    background: linear-gradient(rgba(#00619c,0.7),rgba( #00619c ,0.7)), url(../../img/pic-about.jpg);
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+
+
+    &__title{
+        font-size: 6rem;
+        font-weight: bold;
+        color: #fff;
+    }
+}
+// =================
+.site-content{
+    min-height: 100vh;
+    margin-bottom: 1rem;
+}
+.site-container{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.site{
+
+
+  &__box{
+    text-align: center;
+
+  }
+
+  &__heading{
+    font-size: 3.9rem;
+    color: #00619c;
+    padding: 2rem 0;
+    text-transform: uppercase;
+    margin: 5rem 0rem;
+  }
+
+    &__item{
+        min-height: 30vh;
+        margin: 10px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 1rem;
+
+        &:nth-child(odd){
+            direction: rtl;
+            text-align: left;
+        }
+
+        @media only screen and (max-width: 768px){
+            flex-direction: column;
+            text-align: center;
+
+
+            &:nth-child(odd){
+                direction: rtl;
+                text-align: center;
+            }
+            
+        }
+    }
+
+    &__img{
+        width: 40%;
+        height: 50rem;
+        
+
+        img{
+            object-fit: fill;
+            width: 100%;
+            height: 100%;
+        }
+
+        @media only screen and (max-width: 768px){
+            width: 65%;
+        }
+
+        @media only screen and (max-width: 643px){
+            width: 80%;
+            height: 40rem;
+        }
+    }
+
+    &__info{
+        width: 70%;
+    }
+
+    &__title{
+        color: #00619c;
+        font-weight: bold;
+        font-size: 3.2rem;
+
+        @media only screen and (max-width: 768px){
+            margin: 3.5rem 0;
+        }
+    }
+
+    &__text{
+        font-size: 1.5rem;
+        font-weight: 300;
+        color: #00619c;
+
+    }
+}

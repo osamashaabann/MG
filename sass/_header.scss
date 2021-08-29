@@ -1,0 +1,340 @@
+.nav-header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 15;
+    background-color: transparent;
+    font-weight: 100;
+
+}
+
+header{
+    background: transparent;
+    max-width: 100vw;
+    margin: auto;
+    position: relative;
+    z-index: 9;
+    font-weight: 100;
+
+}
+
+header .logo{
+    display: inline-block;
+}
+
+.burger-blue{
+    display: none;
+}
+
+header.sticky{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(#fff, 1);
+    transform: translateY(-200%);
+    z-index: 15;
+    transition: all 0.2s ease-in-out;
+}
+
+header.sticky .menu li a{
+    color: #00619c;
+}
+
+
+body.scroll header.sticky{
+    transform: translateY(0%);
+}
+
+
+body.scroll header.sticky .logo-white{
+    display: none;
+}
+
+body header .logo-blue{
+    display: none;
+}
+
+body.scroll header.sticky .logo-blue{
+    display: block;
+}
+
+.nav-wrapper{
+    min-height: 10vh;
+    padding: 1.5rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    flex: 3 1 20rem;
+}
+
+.logo .logo-blue,
+.logo .logo-white{
+    width: 24.5rem;
+
+}
+
+nav.nav-wrapper ul{
+    display: flex;
+    align-self: center;
+    justify-content: space-around;
+    flex: 1 1 25rem;
+    list-style: none;
+    font-size: 1.7rem;
+    line-height: 2.3rem;    
+}
+nav.nav-wrapper ul li {
+    padding: 1.6rem 0;
+    
+    
+}
+
+nav.nav-wrapper ul li a{
+    text-decoration: none;
+    color: #fff;
+
+}
+// The dropdown menu
+.drop-menu{
+    position: relative;
+}
+
+nav.nav-wrapper .drop-menu .dropdown {
+    position: absolute;
+    top: 5.5rem;
+    left: 0;
+    min-width: 20rem;
+	background-color: #fff;
+	display: none;
+    visibility: hidden;
+    opacity: 0;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+nav.nav-wrapper .drop-menu:hover .dropdown {
+	display: flex;
+    visibility: visible;
+    opacity: 1;
+    
+}
+
+.drop-menu .dropdown li a{
+    color: #222;
+}
+
+.drop-menu .dropdown li {
+    width: 100%;
+    padding: 1rem;
+    transition: all .4s ease;
+    cursor: pointer;
+}
+
+
+.drop-menu .dropdown li:hover{
+    background-color: #00619c;
+
+}
+
+.drop-menu .dropdown li:hover a{
+    color: #fff;
+}
+
+.drop-menu .dropdown li a{
+    transition: all .4s ease;
+}
+.drop-menu .dropdown li:hover a{
+    margin-left: .6rem;
+
+}
+
+//Social icon of the Header
+.social{
+    position: absolute;
+    top: 10rem;
+    z-index: 5;
+    bottom: 0;
+    width: 300px;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &__line{
+        width: 1px;
+        height: 195px;
+        background-color: #fff;
+        margin-bottom: 2rem;
+    }
+
+    &__links{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 2rem 0;
+        color: #fff;
+        font-size: 1.2rem;
+
+        a{
+            &:hover,
+            &:active,
+            &:visited{
+                color: #fff;
+            }
+        }
+
+        &--facebook{
+            color: #fff;
+            margin-bottom: 0.7rem;
+                }
+        &--instagram{
+            color: #fff;
+        
+                }
+
+    }
+}
+
+@media only screen and (max-width: $bp-large) {
+    .social{
+        top: 4rem;
+        left: -10rem;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .social{
+        top: 4rem;
+        left: -12rem;
+    }
+}
+
+@media only screen and (max-width: $bp-medium) {
+    .social{
+        top: 4rem;
+        left: -16rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    header.sticky{
+        z-index: 9;
+    }
+
+
+    .menu-trigger{
+        background: url(../img/hamburger-icon.svg) no-repeat center / cover;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        fill: #fff;
+        z-index: 40;
+        width: 3.5rem;
+        height: 3.5rem;
+        cursor: pointer;
+    }
+
+    .burger-blue{
+        width: 3.5rem;
+        height: 3.5rem;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+    }
+
+    body header .burger-blue{
+        display: none;
+    }
+    
+    body.scroll header.sticky .burger-blue{
+        display: block;
+    }
+
+    .main-overlay{
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background:rgba(0, 0, 0, 0.9);
+        z-index: 10;
+        display: none;
+    }
+
+    .main-overlay::after{
+        background: url(../img/close-icon.svg) no-repeat center / cover;
+        position: fixed;
+        top: 15px;
+        right: 10px;
+        z-index: 250;
+        width: 3.5rem;
+        height: 3.5rem;
+        display: block;
+        content: "";
+        cursor: pointer;
+    }
+
+    nav.nav-wrapper ul{
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        background-color: #131313;
+        z-index: 30;
+        display: block;
+        width: 40rem;
+        max-width: 100%;
+        padding: 0px 10px;
+        transform: translate3d(-100%, 0, 0);
+        transition: all 0.3s ease-in-out;
+    }
+
+    nav.nav-wrapper ul li{
+        display: block;
+        border-color: transparent;
+        padding: 16px 12px;
+        transition: all 0.2s ease-in-out;
+    }
+
+    nav.nav-wrapper ul li:hover{
+        padding-left: 18px;
+    }
+
+    nav.nav-wrapper ul li a:hover{
+        border-color: transparent;
+    }
+
+    body.menu-active .menu{
+        display: block;
+        transform: translate3d(0, 0, 0);
+    }
+
+    body.menu-active .main-overlay{
+        display: block;
+    }
+
+    body.menu-active .menu-trigger{
+        display: none;
+    }
+
+    section.beating-heart{
+        margin-top: 25px;
+    }
+}
+
+
+
+
+
+
+
+
